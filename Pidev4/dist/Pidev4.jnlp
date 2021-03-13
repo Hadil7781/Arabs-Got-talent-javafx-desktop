@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Pidev4.jnlp">
+  <information>
+    <title>Pidev4</title>
+    <vendor>Khawla</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Pidev4.jar" size="1976186" download="eager" />
+    <jar href="lib\AnimateFX-1.2.0.jar" size="85823" download="eager" />
+    <jar href="lib\GMapsFX-2.0.9.jar" size="166541" download="eager" />
+    <jar href="lib\GMapsFX-2.10.0.jar" size="154471" download="eager" />
+    <jar href="lib\GMapsFX-2.11.0.jar" size="138948" download="eager" />
+    <jar href="lib\GMapsFX-2.12.0.jar" size="207618" download="eager" />
+    <jar href="lib\JavaFileUploader.jar" size="4633" download="eager" />
+    <jar href="lib\charm-glisten-4.4.1.jar" size="1040787" download="eager" />
+    <jar href="lib\commons-codec-1.11.jar" size="335042" download="eager" />
+    <jar href="lib\commons-net-3.3-ftp.jar" size="135277" download="eager" />
+    <jar href="lib\commons-net-3.5.jar" size="303658" download="eager" />
+    <jar href="lib\controlsfx-8.40.11.jar" size="985420" download="eager" />
+    <jar href="lib\controlsfx-8.40.16.jar" size="1416162" download="eager" />
+    <jar href="lib\fontawesomefx-8.1.jar" size="179086" download="eager" />
+    <jar href="lib\fontawesomefx-8.5.jar" size="181458" download="eager" />
+    <jar href="lib\fontawesomefx-commons-9.1.2.jar" size="24064" download="eager" />
+    <jar href="lib\google-maps-services-0.2.7.jar" size="184987" download="eager" />
+    <jar href="lib\itextpdf-5.1.0.jar" size="1614453" download="eager" />
+    <jar href="lib\javafx-ui-controls.jar" size="1201545" download="eager" />
+    <jar href="lib\javase-3.1.1-20150211.225955-15.jar" size="39223" download="eager" />
+    <jar href="lib\javase-3.3.0.jar" size="41451" download="eager" />
+    <jar href="lib\jaxb-api-2.3.0.jar" size="125632" download="eager" />
+    <jar href="lib\jfoenix-1.0.0.jar" size="2186636" download="eager" />
+    <jar href="lib\logback-classic-1.2.1.jar" size="310442" download="eager" />
+    <jar href="lib\logback-core-1.2.1.jar" size="473113" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+    <jar href="lib\mysql-connector-java-8.0.11.jar" size="2036609" download="eager" />
+    <jar href="lib\mysql-connector-java-8.0.19.jar" size="2356711" download="eager" />
+    <jar href="lib\sca4j-ftp-server-0.9.8.jar" size="43361" download="eager" />
+    <jar href="lib\slf4j-api-1.7.23.jar" size="41105" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Pidev4" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="pidev4.Pidev4"  name="Pidev4" />
+  <update check="always"/>
+</jnlp>

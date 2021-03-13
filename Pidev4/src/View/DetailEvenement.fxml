@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.lynden.gmapsfx.GoogleMapView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+
+<AnchorPane id="AnchorPane" prefHeight="610.0" prefWidth="892.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.DetailEvenementController">
+   <children>
+      <Pane prefHeight="179.0" prefWidth="880.0" style="-fx-background-color: #7156DD;">
+         <children>
+            <HBox layoutX="821.0" layoutY="14.0" spacing="5.0" />
+            <Circle fx:id="btnClose" fill="#f44336" layoutX="21.0" layoutY="21.0" onMouseClicked="#handleMouseAction" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#fbdd2d" layoutX="40.0" layoutY="21.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#00c71c" layoutX="59.0" layoutY="21.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="584.0" layoutY="-16.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="245.0" fitWidth="274.0" layoutX="605.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@banner_bg.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="300.0" layoutY="19.0" prefHeight="80.0" prefWidth="370.0" style="-fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-color: white; -fx-background-radius: 22;">
+               <children>
+                  <Label layoutX="56.0" layoutY="17.0" prefHeight="30.0" prefWidth="300.0" style="-fx-font-size: 26; -fx-font-weight: bold; -fx-padding: 4; -fx-text-fill: #7156DD;" styleClass="labeltitre" stylesheets="@stylesheet.css" text="Détaill Evenement" />
+                  <ImageView fx:id="btnReturns" fitHeight="49.0" fitWidth="39.0" layoutX="8.0" layoutY="25.0" onMouseClicked="#handleMouseAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@back.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <ImageView fitHeight="150.0" fitWidth="134.0" layoutX="-4.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@action_image.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="pnlMAp" layoutX="180.0" layoutY="109.0" prefHeight="487.0" prefWidth="606.0" style="-fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-color: white;">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         
+           
+         
+         
+         <children>
+            <ImageView fx:id="btnReturnsDet" fitHeight="80.0" fitWidth="89.0" onMouseClicked="#handleMouseAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@back.png" />
+               </image>
+            </ImageView>
+            <Pane fx:id="pnlDeta" layoutX="-1.0" prefHeight="487.0" prefWidth="614.0" style="-fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-color: white;">
+               <children>
+                  <JFXButton fx:id="GoMap" layoutX="435.0" layoutY="315.0" onAction="#handleActionButtonGoMap" styleClass="envoyer_btn" stylesheets="@stylesheet.css" text="Consulter map" />
+                  <Rating fx:id="note" layoutX="361.0" layoutY="437.0" rating="0.0" />
+                  <JFXButton fx:id="btn_participer" alignment="CENTER" layoutX="55.0" layoutY="435.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleActionButtonParticiper" prefHeight="36.0" prefWidth="189.0" ripplerFill="#7156dd" style="-fx-background-radius: 25;" styleClass="envoyer_btn_unhover_supprimer" text="Participer" textFill="#4059a9">
+                     <font>
+                        <Font name="Impact" size="17.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <stylesheets>
+                       
+                              <URL value="@stylesheet.css" />
+                        <URL value="@stylesheet.css" />
+                     </stylesheets>
+                  </JFXButton>
+                  <Label fx:id="labelTitre" layoutX="50.0" layoutY="259.0" prefHeight="68.0" prefWidth="200.0" styleClass="labeltitre" stylesheets="@stylesheet.css" text="dsqdsq" textFill="#4059a9">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelDate" layoutX="208.0" layoutY="259.0" prefHeight="55.0" prefWidth="332.0" styleClass="labeltitre" stylesheets="@stylesheet.css" text="sdqs" textFill="#4059a9">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelDesc" layoutX="48.0" layoutY="361.0" prefHeight="46.0" prefWidth="320.0" styleClass="labeltitre" stylesheets="@stylesheet.css" textFill="#4059a9">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labellocalisation" layoutX="48.0" layoutY="311.0" prefHeight="62.0" prefWidth="370.0" styleClass="labeltitre" stylesheets="@stylesheet.css" textFill="#4059a9">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="imgEvenet" fitHeight="231.0" fitWidth="564.0" layoutX="55.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="SW_RESIZE" />
+                     </cursor>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

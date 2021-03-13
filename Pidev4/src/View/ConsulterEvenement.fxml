@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="560.0" prefWidth="878.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.ConsulterEvenementController">
+   <children>
+      <Pane layoutX="-8.0" layoutY="-1.0" prefHeight="105.0" prefWidth="886.0" style="-fx-background-color: #7156DD;">
+         <children>
+            <Label layoutX="277.0" layoutY="23.0" prefHeight="51.0" prefWidth="413.0" style="-fx-alignment: CENTER; -fx-font-size: 35;" stylesheets="@stylesheet.css" text="Liste des evenements " textFill="#bfb90e">
+               <font>
+                  <Font name="Impact" size="20.0" />
+               </font>
+            </Label>
+            <HBox layoutX="24.0" layoutY="14.0" spacing="5.0" />
+            <Circle fx:id="btnClose" fill="#f44336" layoutX="60.0" layoutY="56.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#fbdd2d" layoutX="79.0" layoutY="56.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#00c71c" layoutX="98.0" layoutY="56.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </Pane>
+      <Pane fx:id="Pane" layoutX="9.0" layoutY="103.0" prefHeight="450.0" prefWidth="868.0">
+         <children>
+            <JFXListView fx:id="listView" layoutX="6.0" layoutY="84.0" prefHeight="366.0" prefWidth="861.0" />
+            <JFXComboBox fx:id="cb_cat" layoutX="113.0" layoutY="24.0" onAction="#handleSearch" prefHeight="25.0" prefWidth="203.0" />
+         </children>
+      </Pane>
+      <ImageView fx:id="btnReturnAcls" fitHeight="51.0" fitWidth="107.0" layoutX="7.0" layoutY="114.0" onMouseClicked="#handleMouseAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@back.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="btn_filtrerEvents" labelFloat="true" layoutX="594.0" layoutY="122.0" minWidth="194.0" onAction="#filtrer" prefHeight="32.0" prefWidth="216.0" promptText="Filter" unFocusColor="#3091d1" />
+      <FontAwesomeIcon iconName="SEARCH" layoutX="787.0" layoutY="143.0" />
+      <HBox layoutX="30.0" layoutY="7.0" spacing="5.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="583.0" prefWidth="793.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.AfficherPublicationController">
+    <stylesheets>
+        <URL value="@afficherpublication.css" />
+    </stylesheets>
+   <children>
+      <BorderPane layoutY="99.0" prefHeight="482.0" prefWidth="793.0">
+         <bottom>
+            <Pane fx:id="btnAjoutPublication" prefHeight="480.0" prefWidth="793.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXTextField fx:id="txt_filterPub" labelFloat="true" layoutX="496.0" layoutY="34.0" minWidth="194.0" prefHeight="32.0" prefWidth="216.0" promptText="Filter" />
+                  <ImageView fx:id="btnReturn" fitHeight="51.0" fitWidth="107.0" layoutX="21.0" layoutY="24.0" onMouseClicked="#handleMouseAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@back.png" />
+                     </image>
+                  </ImageView>
+                  <Pane prefHeight="468.0" prefWidth="880.0" style="-fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-color: white;">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <children>
+                        <JFXListView fx:id="listView" layoutX="80.0" layoutY="169.0" prefHeight="286.0" prefWidth="764.0" style="-fx-background-radius: 25px;" stylesheets="@stylesheet.css" />
+                        <JFXButton fx:id="btnAjouterPublication" alignment="CENTER" layoutX="178.0" layoutY="123.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleButtonOpenAddAction" prefHeight="36.0" prefWidth="189.0" ripplerFill="#4059a9" style="-fx-background-radius: 25px;" styleClass="envoyer_btn_unhover_supprimer" text="Ajouter" textFill="#4059a9">
+                           <font>
+                              <Font name="Impact" size="17.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <stylesheets>
+                              <URL value="@stylesheet.css" />
+                           </stylesheets>
+                        </JFXButton>
+                        <JFXButton fx:id="btnDeletePublication" alignment="CENTER" layoutX="655.0" layoutY="123.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleButtonDeleteAction" prefHeight="36.0" prefWidth="189.0" ripplerFill="#4059a9" style="-fx-background-radius: 25px;" styleClass="envoyer_btn_unhover_supprimer" text="Supprimer" textFill="#4059a9">
+                           <font>
+                              <Font name="Impact" size="17.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <stylesheets>
+                              <URL value="@stylesheet.css" />
+                           </stylesheets>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_modifier" alignment="CENTER" layoutX="432.0" layoutY="123.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleButtonEditAction" prefHeight="36.0" prefWidth="189.0" ripplerFill="#4059a9" style="-fx-background-radius: 25px;" styleClass="envoyer_btn_unhover_supprimer" text="Modifier" textFill="#4059a9">
+                           <font>
+                              <Font name="Impact" size="17.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <stylesheets>
+                              <URL value="@stylesheet.css" />
+                           </stylesheets>
+                        </JFXButton>
+                        <ImageView fitHeight="116.0" fitWidth="1.0" layoutX="-6.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="103.0" fitWidth="142.0" layoutX="-5.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@price-2.png" />
+                           </image></ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </bottom>
+      </BorderPane>
+      <Label layoutX="298.0" layoutY="33.0" prefHeight="32.0" prefWidth="335.0" style="-fx-alignment: CENTER; -fx-font-size: 35;" stylesheets="@stylesheet.css" text="Liste de publication" textFill="#bfb90e">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="61.0" fitWidth="72.0" layoutX="24.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image1.png" />
+         </image>
+      </ImageView>
+      <Pane prefHeight="172.0" prefWidth="880.0" style="-fx-background-color: #7156DD;">
+         <children>
+            <HBox layoutX="821.0" layoutY="14.0" spacing="5.0" />
+            <Circle fx:id="btnClose" fill="#f44336" layoutX="21.0" layoutY="21.0" onMouseClicked="#handleMouse" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#fbdd2d" layoutX="40.0" layoutY="21.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#00c71c" layoutX="59.0" layoutY="21.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="584.0" layoutY="-16.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="245.0" fitWidth="274.0" layoutX="605.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@banner_bg.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="248.0" layoutY="7.0" prefHeight="80.0" prefWidth="370.0" style="-fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-color: white; -fx-background-radius: 22;">
+               <children>
+                  <Label layoutX="56.0" layoutY="17.0" prefHeight="30.0" prefWidth="300.0" style="-fx-font-size: 26; -fx-font-weight: bold; -fx-padding: 4; -fx-text-fill: #7156DD;" styleClass="labeltitre" stylesheets="@stylesheet.css" text="Afficher Publication" />
+                  <ImageView fx:id="btnReturns" fitHeight="49.0" fitWidth="39.0" layoutX="8.0" layoutY="25.0" onMouseClicked="#handleMouse" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@back.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

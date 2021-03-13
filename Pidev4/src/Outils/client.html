@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Google Maps JavaScript API</title>
+        <style>html, body, #map-canvas {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#map-canvas {
+	height: 75%;
+	width: 75%;
+}
+
+label {
+	padding: 20px 10px;
+	display: inline-block;
+	font-size: 1.5em;
+}
+
+input {
+	font-size: 0.75em;
+	padding: 10px;
+}</style>
+</head>
+<body>
+
+<center><h1>Localisation </h1></center>
+<div id="map-canvas"></div>
+<script>
+    
+
+  var fullName;
+function initialize() {
+
+	var mapOptions, map, marker, searchBox, city,
+		infoWindow = '',
+		addressEl = document.querySelector( '#map-search' ),
+		latEl = document.querySelector( '.latitude' ),
+		longEl = document.querySelector( '.longitude' ),
+		element = document.getElementById( 'map-canvas' );
+	city = document.querySelector( '.reg-input-city' );
+
+	mapOptions = {
+		// How far the maps zooms in.
+		zoom: 8,
+		// Current Lat and Long position of the pin/
+		center: new google.maps.LatLng( 33.921452, 8.129640 ),
+		// center : {
+		// 	lat: -34.397,
+		// 	lng: 150.644
+		// },
+		disableDefaultUI: false, // Disables the controls like zoom control on the map if set to true
+		scrollWheel: true, // If set to false disables the scrolling on the map.
+		draggable: true, // If set to false , you cannot move the map around.
+		// mapTypeId: google.maps.MapTypeId.HYBRID, // If set to HYBRID its between sat and ROADMAP, Can be set to SATELLITE as well.
+		// maxZoom: 11, // Wont allow you to zoom more than this
+		// minZoom: 9  // Wont allow you to go more up.
+
+	};
+
+	/**
+	 * Creates the map using google function google.maps.Map() by passing the id of canvas and
+	 * mapOptions object that we just created above as its parameters.
+	 *
+	 */
+	// Create an object map with the constructor function Map()
+	map = new google.maps.Map( element, mapOptions ); // Till this like of code it loads up the map.
+
+	/**
+	 * Creates the marker on the map
+	 *
+	 */
+	marker = new google.maps.Marker({
+		position: mapOptions.center,
+		map: map,
+		// icon: 'http://pngimages.net/sites/default/files/google-maps-png-image-70164.png',
+		draggable: true
+	});
+
+	
+
+}
+
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKXNneTVr8yaKCVD_sCEFj9CNCtcU85V8&libraries=places&callback=initialize"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.ModifierPublicationController">
+    <stylesheets>
+        <URL value="@modifierpublication.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="-6.0" prefHeight="79.0" prefWidth="880.0" style="-fx-background-color: #7156DD;">
+         <children>
+            <Label layoutX="244.0" layoutY="14.0" prefHeight="51.0" prefWidth="391.0" style="-fx-alignment: CENTER; -fx-font-size: 35;" stylesheets="@stylesheet.css" text="Modifier une publication" textFill="#bfb90e">
+               <font>
+                  <Font name="Impact" size="20.0" />
+               </font>
+            </Label>
+            <HBox layoutX="821.0" layoutY="14.0" spacing="5.0" />
+            <ImageView fitHeight="92.0" fitWidth="133.0" layoutX="56.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image1.png" />
+               </image>
+            </ImageView>
+            <Circle fx:id="btnClose" fill="#f44336" layoutX="18.0" layoutY="14.0" onMouseClicked="#handleMousePubModif" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#fbdd2d" layoutX="37.0" layoutY="14.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#00c71c" layoutX="56.0" layoutY="14.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </Pane>
+      <AnchorPane layoutX="4.0" layoutY="84.0" prefHeight="361.0" prefWidth="870.0" style="-fx-background-color: #fff;">
+         <children>
+            <JFXTextField fx:id="txt_titre" layoutX="222.0" layoutY="29.0" prefHeight="25.0" prefWidth="486.0" promptText="Titre" />
+            <JFXButton fx:id="btn_image" alignment="BASELINE_LEFT" contentDisplay="RIGHT" layoutX="222.0" layoutY="144.0" onAction="#handleButtonEditImageAction" prefHeight="158.0" prefWidth="486.0" ripplerFill="#7156dd" style="-fx-border-color: linear-gradient(to bottom left,#6F4CBB,#431FA0); -fx-background-position: CENTER;" stylesheets="@stylesheet.css" text="Choisissez une image" textFill="#7156dd" />
+            <ImageView fitHeight="49.0" fitWidth="39.0" layoutX="19.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@back.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btn_modifer_pub" alignment="CENTER" buttonType="RAISED" layoutX="202.0" layoutY="324.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleButtonEditAction" prefHeight="36.0" prefWidth="189.0" ripplerFill="#4059a9" styleClass="envoyer_btn_unhover" text="Modifier" textFill="#4059a9">
+               <font>
+                  <Font name="Impact" size="17.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+               <stylesheets>
+                  <URL value="@../../../../../../Chédy/Documents/netbeansPRojetct2/PiDevClient/src/pidevclient/views/utils/css/stylehseet.css" />
+                  <URL value="@../../../../../../Chédy/Documents/netbeansPRojetct2/PiDevClient/src/pidevclient/util/stylehseet.css" />
+                  <URL value="@stylesheet.css" />
+               </stylesheets>
+            </JFXButton>
+            <JFXButton fx:id="btnEditPublication" alignment="CENTER" buttonType="RAISED" layoutX="503.0" layoutY="322.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleButtonEditAction" prefHeight="36.0" prefWidth="189.0" ripplerFill="#4059a9" styleClass="envoyer_btn_unhover_supprimer" text="Annuler" textFill="#4059a9">
+               <font>
+                  <Font name="Impact" size="17.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+               <stylesheets>
+                  <URL value="@../../../../../../Chédy/Documents/netbeansPRojetct2/PiDevClient/src/pidevclient/views/utils/css/stylehseet.css" />
+                  <URL value="@../../../../../../Chédy/Documents/netbeansPRojetct2/PiDevClient/src/pidevclient/util/stylehseet.css" />
+                  <URL value="@stylesheet.css" />
+               </stylesheets>
+            </JFXButton>
+            <ImageView fitHeight="64.0" fitWidth="143.0" layoutX="565.0" layoutY="322.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="immg" fitHeight="64.0" fitWidth="107.0" layoutX="602.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgCurrent" fitHeight="150.0" fitWidth="486.0" layoutX="222.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

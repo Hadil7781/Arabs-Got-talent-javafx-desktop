@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AnchorPane" prefHeight="633.0" prefWidth="488.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.AjouterEvenementController">
+   <children>
+      <Pane fx:id="pnlEvenement" prefHeight="141.0" prefWidth="695.0" style="-fx-background-color: #7156DD;">
+         <children>
+            <Label layoutX="93.0" layoutY="25.0" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="200.0" />
+               </padding>
+            </Label>
+            <Label layoutX="139.0" layoutY="46.0" prefHeight="32.0" prefWidth="335.0" style="-fx-alignment: CENTER; -fx-font-size: 35;" stylesheets="@stylesheet.css" text="Ajouter evenement" textFill="#bfb90e">
+               <font>
+                  <Font name="Impact" size="20.0" />
+               </font>
+            </Label>
+            <Circle fx:id="btnClose" fill="#f44336" layoutX="74.0" layoutY="72.0" onMouseClicked="#handleMouseEvent" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#fbdd2d" layoutX="93.0" layoutY="72.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#00c71c" layoutX="112.0" layoutY="72.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </Pane>
+      <Button layoutX="290.0" layoutY="551.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="212.0" style="-fx-background-color: #7156DD;" stylesheets="@stylesheet.css" text="Valider" textFill="#f5f0f0" />
+      <Pane layoutX="40.0" layoutY="148.0" prefHeight="498.0" prefWidth="596.0" style="-fx-background-color: #fff;">
+         <children>
+            <JFXDatePicker fx:id="date_fin" defaultColor="#7156dd" layoutX="410.0" layoutY="181.0" prefHeight="25.0" prefWidth="173.0" promptText="Date de fin" />
+            <JFXTextField fx:id="txt_titre" focusColor="#7156dd" labelFloat="true" layoutX="81.0" layoutY="15.0" prefHeight="25.0" prefWidth="500.0" promptText="titre" unFocusColor="#7156dd" />
+            <JFXDatePicker fx:id="date_debut" defaultColor="#7156dd" layoutX="82.0" layoutY="181.0" prefHeight="25.0" prefWidth="193.0" promptText="Date de debut" />
+            <JFXButton fx:id="btn_image" alignment="TOP_LEFT" layoutX="84.0" layoutY="404.0" onAction="#HandleActionButtonImage" prefHeight="25.0" prefWidth="500.0" ripplerFill="#7156dd" style="-fx-border-color: linear-gradient(to bottom left,#6F4CBB,#431FA0);" text="Choisissez une image" />
+            <JFXTextField fx:id="txt_prix" layoutX="251.0" layoutY="351.0" prefHeight="25.0" prefWidth="167.0" promptText="prix" unFocusColor="#7156dd" />
+            <ImageView fx:id="immg" fitHeight="43.0" fitWidth="199.0" layoutX="396.0" layoutY="396.0" pickOnBounds="true" preserveRatio="true" />
+            <JFXTextField fx:id="txt_description" layoutX="82.0" layoutY="69.0" prefHeight="81.0" prefWidth="500.0" promptText="Description" unFocusColor="#7156dd" />
+            <JFXComboBox fx:id="cb_categories" layoutX="248.0" layoutY="229.0" prefHeight="25.0" prefWidth="173.0" />
+            <JFXTextField fx:id="nb_min_participant" layoutX="94.0" layoutY="291.0" prefHeight="25.0" prefWidth="156.0" promptText="Nbr min de particiapnt" unFocusColor="#7156dd" />
+            <JFXTextField fx:id="nb_max_participant" layoutX="423.0" layoutY="291.0" prefHeight="25.0" prefWidth="146.0" promptText="Nbr max de participant" unFocusColor="#7156dd" />
+            <JFXButton fx:id="btn_ajouter" alignment="CENTER" buttonType="RAISED" layoutX="84.0" layoutY="448.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleButtonAddEvnementAction" prefHeight="36.0" prefWidth="189.0" ripplerFill="#4059a9" styleClass="envoyer_btn_unhover" text="Ajouter" textFill="#4059a9">
+               <font>
+                  <Font name="Impact" size="17.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+               <stylesheets>                  <URL value="@stylesheet.css" />
+               </stylesheets>
+            </JFXButton>
+            <JFXButton fx:id="btn_annuler" alignment="CENTER" buttonType="RAISED" layoutX="396.0" layoutY="448.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleButtonAnnulerAction" prefHeight="36.0" prefWidth="189.0" ripplerFill="#4059a9" styleClass="envoyer_btn_unhover_supprimer" text="Annuler" textFill="#4059a9">
+               <font>
+                  <Font name="Impact" size="17.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+               <stylesheets>
+                  <URL value="@stylesheet.css" />
+               </stylesheets>
+            </JFXButton>
+            <Label fx:id="description_label" layoutX="84.0" layoutY="164.0" prefHeight="17.0" prefWidth="347.0" textFill="#e10c0c" />
+            <Label fx:id="date_label" layoutX="80.0" layoutY="221.0" prefHeight="17.0" prefWidth="478.0" textFill="#e10c0c" />
+            <Label fx:id="titre_label" layoutX="78.0" layoutY="61.0" prefHeight="17.0" prefWidth="347.0" textFill="#e10c0c" />
+            <Label fx:id="categorie_label" layoutX="80.0" layoutY="260.0" prefHeight="17.0" prefWidth="478.0" textFill="#e10c0c" />
+            <Label fx:id="nb_min_label" layoutX="92.0" layoutY="334.0" prefHeight="17.0" prefWidth="156.0" textFill="#e10c0c" />
+            <Label fx:id="max_label" layoutX="425.0" layoutY="334.0" prefHeight="17.0" prefWidth="156.0" textFill="#e10c0c" />
+            <Label fx:id="prix_label" layoutX="92.0" layoutY="376.0" prefHeight="17.0" prefWidth="156.0" textFill="#e10c0c" />
+            <Label fx:id="label_image" layoutX="92.0" layoutY="431.0" prefHeight="17.0" prefWidth="156.0" textFill="#e10c0c" />
+            <Hyperlink fx:id="btn_map" layoutX="80.0" layoutY="50.0" onAction="#HandleActionButtonGoMap" prefHeight="23.0" prefWidth="356.0" text="Consulter Map pour  inserer votre etablissement et localisation" />
+            <Label fx:id="label" layoutX="440.0" layoutY="70.0" prefHeight="17.0" prefWidth="146.0" />
+         </children>
+      </Pane>
+      <Pane layoutY="500.0" prefHeight="60.0" prefWidth="266.0" />
+      <HBox layoutX="14.0" layoutY="510.0" spacing="5.0" />
+   </children>
+</AnchorPane>

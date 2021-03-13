@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="633.0" prefWidth="939.0" style="-fx-background-color: #cccccc;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.TunisianGotTalenController">
+    <stylesheets>
+        <URL value="@tunisiangottalen.css" />
+    </stylesheets>
+   <children>
+      <StackPane fx:id="stackpane" layoutX="123.0" prefHeight="573.0" prefWidth="816.0">
+         <children>
+            <HBox prefHeight="573.0" prefWidth="780.0" spacing="5.0" />
+            <FontAwesomeIcon fill="#f8f4f4" iconName="USER" size="2em" wrappingWidth="29.999991685152054" />
+            <Pane fx:id="pnlHome" prefHeight="573.0" prefWidth="854.0" style="-fx-background-color: #cccccc;">
+               <children>
+                  <HBox alignment="CENTER" fillHeight="false" layoutX="172.0" layoutY="149.0" spacing="80.0" stylesheets="@../../../../../../Chédy/Documents/netbeansPRojetct2/PiDevClient/src/pidevclient/util/stylehseet.css" />
+                  <Pane layoutX="-267.0" prefHeight="102.0" prefWidth="1085.0" style="-fx-background-color: #7156DD;">
+                     <children>
+                        <HBox layoutX="179.0" layoutY="44.0" spacing="5.0">
+                           <children>
+                              <Circle fx:id="btnClose" fill="#f44336" onMouseClicked="#handleMouseEventModif" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fill="#fbdd2d" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fill="#00c71c" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                           </children></HBox>
+                        <Pane layoutX="282.0" layoutY="7.0" prefHeight="82.0" prefWidth="684.0" style="-fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-color: white; -fx-background-radius: 22;">
+                           <children>
+                              <Label alignment="CENTER" layoutX="153.0" layoutY="18.0" prefHeight="46.0" prefWidth="425.0" style="-fx-font-size: 26; -fx-font-weight: bold; -fx-padding: 4; -fx-text-fill: #7156DD;" styleClass="labeltitre" stylesheets="@stylesheet.css" text="Bienvenue à Tunisian Got Talent" />
+                              <ImageView fitHeight="70.0" fitWidth="82.0" layoutX="27.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Outils/Sans%20titre%20(4).png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="14.0" layoutY="193.0" prefHeight="416.0" prefWidth="731.0" style="-fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-color: white; -fx-background-radius: 22;">
+                     <children>
+                        <ImageView fx:id="slide2" fitHeight="202.0" fitWidth="377.0" layoutX="207.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Outils/slide1.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="slide1" fitHeight="170.0" fitWidth="358.0" layoutX="170.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@people.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton id="btn1" fx:id="btnPrevious" layoutX="120.0" layoutY="91.0" styleClass="btn" text="&lt;">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                           <stylesheets>
+                              <URL value="@../../../../netbeansPRojetct2/PiDevClient/src/pidevclient/util/slideshow.css" />
+                              <URL value="@../Outils/slideshow.css" />
+                           </stylesheets>
+                        </JFXButton>
+                        <JFXButton id="btn1" fx:id="btnNext" layoutX="535.0" layoutY="91.0" prefHeight="60.0" prefWidth="62.0" styleClass="btn" text="&gt;">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                           <stylesheets>
+                              <URL value="@../../../../netbeansPRojetct2/PiDevClient/src/pidevclient/util/slideshow.css" />
+                              <URL value="@../Outils/slideshow.css" />
+                           </stylesheets>
+                        </JFXButton>
+                        <Label fx:id="lblPageNumber" layoutX="326.0" layoutY="197.0" prefHeight="17.0" prefWidth="18.0" styleClass="lbl-footer" text="1/3">
+                           <stylesheets>
+                              <URL value="@../../../../../../Chédy/Documents/netbeansPRojetct2/PiDevClient/src/pidevclient/util/stylehseet.css" />
+                              <URL value="@../../../../../../Chédy/Documents/netbeansPRojetct2/PiDevClient/src/pidevclient/util/slideshow.css" />
+                           </stylesheets>
+                        </Label>
+                        <JFXButton fx:id="btnGoTosPublibtnGoToEvenementClientcation1" alignment="CENTER" layoutX="62.0" layoutY="259.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#HandleActionDisplayEvenementCleint" prefHeight="143.0" prefWidth="299.0" ripplerFill="#4059a9" style="-fx-background-radius: 25px;" styleClass="envoyer_btn_unhover" text="Evenements" textFill="#4059a9">
+                           <font>
+                              <Font name="Courier New Bold Italic" size="36.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <stylesheets>
+                              <URL value="@../../../../../../Chédy/Documents/netbeansPRojetct2/PiDevClient/src/pidevclient/views/utils/css/stylehseet.css" />
+                              <URL value="@../../../../../../Chédy/Documents/netbeansPRojetct2/PiDevClient/src/pidevclient/util/stylehseet.css" />
+                              <URL value="@stylesheet.css" />
+                           </stylesheets>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </JFXButton>
+                        <ImageView fitHeight="82.0" fitWidth="139.0" layoutX="171.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Outils/user.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="btnGoTosPublication" alignment="CENTER" layoutX="371.0" layoutY="259.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#HandleActionDisplayPub" prefHeight="143.0" prefWidth="299.0" ripplerFill="#4059a9" style="-fx-background-radius: 25px;" styleClass="envoyer_btn_unhover" text="Publications" textFill="#4059a9">
+                           <font>
+                              <Font name="Courier New Bold Italic" size="36.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <stylesheets>
+                              <URL value="@../../../../../../Chédy/Documents/netbeansPRojetct2/PiDevClient/src/pidevclient/views/utils/css/stylehseet.css" />
+                              <URL value="@../../../../../../Chédy/Documents/netbeansPRojetct2/PiDevClient/src/pidevclient/util/stylehseet.css" />
+                              <URL value="@stylesheet.css" />
+                           </stylesheets>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </JFXButton>
+                        <ImageView fitHeight="82.0" fitWidth="139.0" layoutX="478.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Outils/billboard.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <JFXButton fx:id="btnModifierProfile" alignment="CENTER" layoutX="65.0" layoutY="131.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="189.0" ripplerFill="#4059a9" style="-fx-background-radius: 25px;" styleClass="envoyer_btn_unhover_supprimer" text="Modifier Profile" textFill="#4059a9">
+                     <font>
+                        <Font name="Impact" size="17.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <stylesheets>
+                        <URL value="@stylesheet.css" />
+                     </stylesheets>
+                  </JFXButton>
+                  <JFXButton fx:id="btnAjouterRec" alignment="CENTER" layoutX="285.0" layoutY="131.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="189.0" ripplerFill="#4059a9" style="-fx-background-radius: 25px;" styleClass="envoyer_btn_unhover_supprimer" text="Ajouter Réclamation" textFill="#4059a9">
+                     <font>
+                        <Font name="Impact" size="17.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <stylesheets>
+                        <URL value="@stylesheet.css" />
+                     </stylesheets>
+                  </JFXButton>
+                  <JFXButton fx:id="btnDec" alignment="CENTER" layoutX="503.0" layoutY="131.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="189.0" ripplerFill="#4059a9" style="-fx-background-radius: 25px;" styleClass="envoyer_btn_unhover_supprimer" text="Se deconnecter" textFill="#4059a9">
+                     <font>
+                        <Font name="Impact" size="17.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <stylesheets>
+                        <URL value="@stylesheet.css" />
+                     </stylesheets>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
